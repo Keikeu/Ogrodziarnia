@@ -3,14 +3,11 @@ $green: #408849;
 $bright-green: #e3fecd;
 $violet: #64549b;
 $eggplant-violet: #4e324c;
+$main-blue: #2E7480;
+$main-green: #6BC25D;
 
-$almost-black: #313131;
+$almost-black: #666;
 $almost-white: #e3e3e3;
-
-body
-{
-  background-color: $bright-green;
-}
 
 a:link
 {
@@ -33,39 +30,56 @@ a:active
   text-decoration: none;
 }
 
+body
+{
+  font-family: 'Montserrat', sans-serif;
+  color: $almost-black;
+}
+
+.panel
+{
+  background-color: #1E5A3B;
+  color: #fff;
+  text-align: right;
+  font-size: 14px;
+  padding: 5px 20px;
+  max-height: 30px;
+}
+
 
 ul
 {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 10px 0;
+  background-color: #fff;
   list-style-type: none;
   text-align: center;
-  //background-color: rgba(76, 175, 80, 0.9);
   z-index: 10;
-  -webkit-box-shadow: inset 0px 40px 174px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 40px 174px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 40px 174px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 3px 5px -3px rgba(153,153,153,1);
+  -moz-box-shadow: 0px 3px 5px -3px rgba(153,153,153,1);
+  box-shadow: 0px 3px 5px -3px rgba(153,153,153,1);
   li
   {
     display: inline-block;
     text-align: center;
-    color: $bright-green;
+    color: $almost-black;
+    font-size: 16px;
+    font-weight: 600;
     a
     {
       display: block;
-      border-radius: 40px;
-      width: 130px;
-      padding: 10px;
+      padding: 5px;
+      margin: 0 30px;
       &.active
       {
-        background-color: $green;
+        border-bottom: 3px solid $main-green;
       }
       &:hover
       {
-
+        border-bottom: 3px solid $main-green;
       }
     }
   }
@@ -74,27 +88,103 @@ ul
 
 .slogan
 {
-  height: 100vh;
-  line-height: 100vh;
-  background-image: url("img/main-section.jpg");
+  height: calc(100vh - 30px);
+  background-image: url("img/main-section3.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  text-align: center;
+  color: #fff;
   h1
   {
-    line-height: 1.6;
+    margin-top: 100px;
     display: inline-block;
     vertical-align: middle;
-    color: $bright-green;
-    font-size: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
   }
+  p
+  {
+    margin-top: 30px;
+  }
+}
+
+.quote
+{
+  height: 60vh;
+  margin: 40px auto;
+  .quote-outside
+  {
+    background-image: url("img/5.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    width: 50vw;
+    height: 50vh;
+    margin: 70px auto;
+    text-align: center;
+  }
+  .quote-middle
+  {
+    border: 3px solid #fff;
+    padding: 20px;
+    height: 100%;
+  }
+  .quote-inside
+  {
+    padding: 20px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.about
+{
+ h3
+ {
+   color: $main-green;
+   font-size: 36px;
+   font-weight: 600;
+   font-family: 'Playfair Display', serif;
+ }
+ h4
+ {
+   color: $almost-black;
+   font-size: 20px;
+   font-weight: 700;
+ }
+ .traits:first-of-type
+ {
+   margin-top: 30px;
+ }
 }
 
 
 
 
 
+//===================
+
+h2
+{
+  color: $main-blue;
+  font-size: 96px;
+  font-weight: 600;
+  position: relative;
+  margin: 50px 0;
+}
+
+.quote:after, .quote:before
+{
+  content: "";
+  display: block;
+  margin: auto;
+  border-top: 2px solid $main-blue;
+  border-bottom: 2px solid $main-blue;
+  width: 100px;
+  height: 20px;
+}
 
 
 
